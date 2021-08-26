@@ -43,7 +43,7 @@ const NavButton = styled.img`
   height: 4rem;
   width: 4rem;
   position: absolute;
-  left: 86vw;
+  left: 80vw;
   top: 1rem;
   z-index: 10;
 `

@@ -31,14 +31,16 @@ export default function HomePage() {
       <PageTitle>
         Welcome to the Tavern of the Taegeuk Warriors Archive
       </PageTitle>
-      {samplePosts.map(({ key, postTitle, postAuthor, imageSrc }) => (
-        <PostCard
-          key={key}
-          postTitle={postTitle}
-          postAuthor={postAuthor}
-          imageSrc={imageSrc}
-        />
-      ))}
+      <BlogPostContainer>
+        {samplePosts.map(({ key, postTitle, postAuthor, imageSrc }) => (
+          <PostCard
+            key={key}
+            postTitle={postTitle}
+            postAuthor={postAuthor}
+            imageSrc={imageSrc}
+          />
+        ))}
+      </BlogPostContainer>
     </Layout>
   )
 }
@@ -56,10 +58,14 @@ const HeroImage = styled.div`
 const PageTitle = styled.h1`
   position: absolute;
   color: white;
-  width: 60%;
-  margin-left: 2rem;
+  margin: 2rem;
   padding: 3rem;
   background: #16161637;
-  top: 60%;
+  top: 50%;
   font-size: 2.5rem;
+  overflow-x: hidden;
+`
+
+const BlogPostContainer = styled.div`
+  display: grid;
 `
