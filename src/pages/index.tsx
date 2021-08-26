@@ -27,10 +27,10 @@ export default function HomePage() {
 
   return (
     <Layout pageTitle='Welcome to the Tavern of the Taegeuk Warriors Archive'>
-      <HeroImage
-        src={`son-hm-flag.jpg`}
-        alt='Son Heungmin smiling while holding a South Korean flag'
-      />
+      <HeroImage></HeroImage>
+      <PageTitle>
+        Welcome to the Tavern of the Taegeuk Warriors Archive
+      </PageTitle>
       {samplePosts.map(({ key, postTitle, postAuthor, imageSrc }) => (
         <PostCard
           key={key}
@@ -43,8 +43,23 @@ export default function HomePage() {
   )
 }
 
-const HeroImage = styled.img`
-  display: flex;
-  width: 100%;
-  height: 100%;
+const HeroImage = styled.div`
+  background-image: url("son-hm-flag.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  position: relative;
+`
+
+const PageTitle = styled.h1`
+  position: absolute;
+  color: white;
+  width: 60%;
+  margin-left: 2rem;
+  padding: 3rem;
+  background: #16161637;
+  top: 60%;
+  font-size: 2.5rem;
 `
