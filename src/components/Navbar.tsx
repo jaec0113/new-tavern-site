@@ -24,13 +24,13 @@ export default function Navbar() {
             </Link>
           </NavItem>
           <NavItem>
-            <Link to='/about'>
-              <NavAnchor>About</NavAnchor>
+            <Link to='/posts'>
+              <NavAnchor>Archived Posts</NavAnchor>
             </Link>
           </NavItem>
           <NavItem>
-            <Link to='/posts'>
-              <NavAnchor>Archived Posts</NavAnchor>
+            <Link to='/about'>
+              <NavAnchor>About</NavAnchor>
             </Link>
           </NavItem>
           <NavItem>
@@ -48,7 +48,7 @@ const NavButton = styled.img`
   height: 4rem;
   width: 4rem;
   position: absolute;
-  left: 80vw;
+  left: 90vw;
   top: 1rem;
   z-index: 10;
 `

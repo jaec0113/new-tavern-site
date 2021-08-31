@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../../components/Layout"
+import PostCard from "../../components/PostCard"
 
 export default function AllPosts({ data }) {
   const posts = data.posts.nodes
@@ -12,12 +13,7 @@ export default function AllPosts({ data }) {
       <PageTitle>All Tavern of the Taegeuk Warriors Archived Posts</PageTitle>
       <PageContent>
         {posts.map((post) => (
-          <Link to={"/posts/" + post.frontmatter.slug} key={post.id}>
-            <div>
-              <h3>{post.frontmatter.title}</h3>
-              <p>{post.frontmatter.author}</p>
-            </div>
-          </Link>
+          <PostCard key={post.id} post={post} />
         ))}
       </PageContent>
     </Layout>

@@ -1,27 +1,33 @@
 import React from "react"
 import styled from "styled-components"
 import Layout from "../components/Layout"
-import PostCard from "../components/PostCard"
+import PageCard from "../components/PageCard"
 
 export default function HomePage() {
-  const samplePosts = [
+  const pageLinks = [
     {
       key: 1,
-      postTitle: "What do you have to do if you're Joo Minkyu? (Opinion)",
-      postAuthor: "Tim Lee",
+      pageTitle: "See All Archived Posts",
+      pageDetail:
+        "View all of the posts that are archived from the old Tavern of the Taegeuk Warriors site",
       imageSrc: `joo-mk-eland.jpg`,
+      path: "/posts",
     },
     {
       key: 2,
-      postTitle: "Korean Youth Players Abroad: Lee Seung Woo",
-      postAuthor: "Jinseok Yang",
+      pageTitle: "About",
+      pageDetail:
+        "Find out more about the purpose of the archive site and the Tavern's original mission",
       imageSrc: `lee-sw-pose.jpg`,
+      path: "/about",
     },
     {
       key: 3,
-      postTitle: "The Case for Park Chu-Young",
-      postAuthor: "Roy Ghim",
+      pageTitle: "Contact",
+      pageDetail:
+        "If you have any questions or comments about the Tavern archive or the original Tavern",
       imageSrc: `park-jy-vs-japan.jpg`,
+      path: "/contact",
     },
   ]
 
@@ -32,12 +38,13 @@ export default function HomePage() {
         Welcome to the Tavern of the Taegeuk Warriors Archive
       </PageTitle>
       <BlogPostContainer>
-        {samplePosts.map(({ key, postTitle, postAuthor, imageSrc }) => (
-          <PostCard
+        {pageLinks.map(({ key, pageTitle, pageDetail, imageSrc, path }) => (
+          <PageCard
             key={key}
-            postTitle={postTitle}
-            postAuthor={postAuthor}
+            pageTitle={pageTitle}
+            pageDetail={pageDetail}
             imageSrc={imageSrc}
+            path={path}
           />
         ))}
       </BlogPostContainer>
