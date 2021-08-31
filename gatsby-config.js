@@ -9,16 +9,23 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-catch-links",
+    "gatsby-transformer-remark",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
       },
-      __key: "images",
     },
     {
       resolve: `gatsby-plugin-typescript`,
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [],
+      },
     },
   ],
 }

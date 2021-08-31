@@ -29,6 +29,11 @@ export default function Navbar() {
             </Link>
           </NavItem>
           <NavItem>
+            <Link to='/posts'>
+              <NavAnchor>Archived Posts</NavAnchor>
+            </Link>
+          </NavItem>
+          <NavItem>
             <Link to='/contact'>
               <NavAnchor>Contact</NavAnchor>
             </Link>
